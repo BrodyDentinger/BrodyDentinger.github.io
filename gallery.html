@@ -1,0 +1,105 @@
+<!--
+Names: Brody Dentinger and Muhammad Yasir Patel
+Student IDs: 100561604 and 100854895
+Date: February 23, 2024
+File: gallery.html
+Description: Gallery page for Harmony Hub.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <!-- CSS SECTION -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
+</head>
+<body>
+<!-- Import the header.html here.-->
+<div id="header-container" data-page-title="Gallery"></div>
+
+<div class="blog-home2 mx-5 ">
+    <div class="container-fluid">
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-md-8 text-center">
+                <h3 class="my-3">Gallery</h3>
+                Here are some photos from past <a href = "./events.html">events!</a>
+            </div>
+            <!-- Gallery Container -->
+            <div class="container mx-5">
+                <div class="row mt-4" id="dynamic-gallery-container">
+                    <!-- Dynamic cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Bootstrap Modal for Lightbox, now with predefined carousel structure -->
+            <div class="modal fade lightbox-modal" id="lightbox-modal" tabindex="-1">
+                <div class="lightbox-modal modal-dialog modal-dialog-centered  ">
+                    <div class="modal-content align-content-center">
+                        <!-- Inside the modal-content of the lightbox-modal -->
+                        <button type="button" class="btn-fullscreen-enlarge btn-close-white"
+                                data-bs-toggle="fullscreen" aria-label="Enlarge fullscreen">
+                            <svg class="bi"><use href="#enlarge"></use></svg>
+                        </button>
+                        <button type="button" class="btn-fullscreen-exit d-none"
+                                data-bs-toggle="exit-fullscreen" aria-label="Exit fullscreen">
+                            <svg class="bi"><use href="#exit"></use></svg>
+                        </button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <div class="modal-body">
+
+                            <div id="lightboxCarousel" class="carousel slide " data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <!-- Indicators will be inserted here -->
+                                </div>
+                                <div class="carousel-inner ">
+                                    <!-- Slides will be inserted here -->
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#lightboxCarousel"
+                                        data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#lightboxCarousel"
+                                        data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- SVG Icons for Fullscreen Controls -->
+<svg class="d-none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="enlarge" viewBox="0 0 16 16">
+        <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+    </symbol>
+    <symbol id="exit" viewBox="0 0 16 16">
+        <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+    </symbol>
+</svg>
+
+
+<footer id="footer-nav"></footer>
+
+<!-- SCRIPTING SECTION -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./node_modules/axios/dist/axios.js"></script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./scripts/main.js"></script>
+<script src="./scripts/user.js"></script>
+
+
+</body>
+</html>

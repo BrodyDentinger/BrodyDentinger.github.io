@@ -1,0 +1,65 @@
+<!--
+Names: Brody Dentinger and Muhammad Yasir Patel
+Student IDs: 100561604 and 100854895
+Date: January 26, 2024
+File: events.html
+Description: Events page for Harmony Hub.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+
+    <!-- CSS SECTION -->
+    <link rel = "stylesheet" href = "./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
+
+</head>
+
+<body>
+<!-- Import the header.html here.-->
+<div id="header-container" data-page-title="Events"></div>
+
+
+<div class="blog-home2 mx-5">
+    <div class="container-fluid">
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-md-8 text-center">
+                <h3 class="my-3">Upcoming Events</h3>
+                Check out what we have coming up below! Or check out the <a href = "./gallery.html">gallery</a>
+                link to look at moments from past events.
+            </div>
+            <div class="blog-home2 mx-5">
+                <div class="container mx-5">
+                    <div class="row mt-4" id="dynamic-cards-container">
+                        <!-- Dynamic cards will be inserted here by JavaScript -->
+                    </div>
+                    <div id="load-more-btn-container" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer-nav"></footer>
+
+<!-- SCRIPTING SECTION -->
+<script src="./scripts/main.js"></script>
+<script src="./scripts/user.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src = "./node_modules/jquery/dist/jquery.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+

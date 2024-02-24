@@ -1,0 +1,130 @@
+<!--
+Names: Brody Dentinger and Muhammad Yasir Patel
+Student IDs: 100561604 and 100854895
+Date: February 23, 2024
+File: register.html
+Description: Register page for Harmony Hub.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+
+    <!-- CSS SECTION -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
+
+</head>
+
+<body>
+<!-- Import the header.html here.-->
+<div id="header-container" data-page-title="Register"></div>
+
+<div class="blog-home2 mx-5">
+    <div class="container-fluid">
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-md-8 text-center">
+                <h3 class="my-3">Register</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div>
+                <h5 class="card-header"></h5>
+                <div>
+                    <form class="contact-info needs-validation" id="register-form" novalidate>
+                        <div id = "messageArea"></div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                       placeholder="John" required>
+                                <div class="invalid-feedback">Please enter a first name.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                       placeholder="Doe" required>
+                                <div class="invalid-feedback">Please enter a last name.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" pattern="^[a-zA-Z0-9_]{4,}[a-zA-Z]+[0-9]*$"
+                                       id="username" name="username"
+                                       placeholder="Username" required>
+                                <div class="invalid-feedback">Please enter a valid username. (at least 5 characters.)</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="email@example.com" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$"
+                                       minlength="8" required>
+                                <div class="invalid-feedback">Please enter a valid email (at least 8 characters).</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control"
+                                       id="phone" name="phone"
+                                       placeholder="+1 234 567 8900" required>
+                                <div class="invalid-feedback">Please enter a valid phone number.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       placeholder="Password"
+                                       pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{6,30}"
+                                        required>
+                                <div class="invalid-feedback">Please enter a valid password
+                                                            (6-30 Characters, 1 upper and lowercase letter, 1 number, 1 special character).
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="register-button" type="submit" class="btn btn-primary">Register</button>
+                            <span>Have an account? </span><a href="./login.html">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer-nav"></footer>
+
+<!-- SCRIPTING SECTION -->
+<script src="./scripts/main.js"></script>
+<script src="./scripts/user.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+</body>
+
+</html>
