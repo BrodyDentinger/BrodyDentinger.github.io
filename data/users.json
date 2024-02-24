@@ -2,21 +2,27 @@
   "users" :
           [
             {
-              "DisplayName" : "Bilbo Baggins",
-              "EmailAddress" : "bilbobaggins@example.com",
+              "FirstName" : "Bilbo",
+              "LastName" : "Baggins",
               "Username" : "bbaggins",
+              "EmailAddress" : "bilbobaggins@example.com",
+              "PhoneNumber" : "123-456-7891",
               "Password" : "12345"
             },
             {
-              "DisplayName" : "Samwise Gamgee",
-              "EmailAddress" : "sgamgee@example.com",
-              "Username" : "sgamgee",
-              "Password" : "789012"
+              "FirstName" : "Gandalf",
+              "LastName" : "Grey",
+              "Username" : "ggrey",
+              "EmailAddress" : "ggrey@example.com",
+              "PhoneNumber" : "123-456-7893",
+              "Password" : "00000"
             },
             {
-              "DisplayName" : "Admin",
-              "EmailAddress" : "admin@example.com",
+              "FirstName" : "Admin",
+              "LastName" : "Admin",
               "Username" : "admin",
+              "EmailAddress" : "admin@example.com",
+              "PhoneNumber" : "123-456-7892",
               "Password" : "555555"
             }
           ]

@@ -1,91 +1,166 @@
 <!--
-Name: Brody Dentinger
-Date: January 19 , 2024
-Description: This is the contact page for our website.
+Names: Brody Dentinger and Muhammad Yasir Patel
+Student IDs: 100561604 and 100854895
+Date: January 26, 2024
 File: contact.html
+Description: Contact page.
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title id = "title">Contact</title>
 
     <!-- CSS SECTION -->
     <link rel = "stylesheet" href = "./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel = "stylesheet" href = "./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel = "stylesheet" href = "./content/app.css">
+    <link rel="stylesheet" href="./content/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 
 </head>
-
 <body>
+<!-- Import the header.html here.-->
+<div id="header-container" data-page-title="Contact"></div>
 
-    <header>
-    </header>
+<div class="blog-home2 mx-5 mb-4">
 
-    <div class = "container">
+    <div class="container-fluid">
+        <div id = "feedbackReasonMessage" class="messageBox2"></div>
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-md-8 text-center">
 
-        <h1 class = "mb-5">Contact Us</h1>
-
-        <div id = "messageArea"></div>
-
-        <div class ="row justify-content-lg-center g-3">
-
-            <form class = "col-lg-6 col-md-10 col-sm-10">
-
-                <div class="input-group mb-3">
-                    <span class = "input-group-text">Full Name</span>
-                    <input id = "fullName" name = "fullName" type="text" class="form-control"
-                           aria-describedby="Full Name" aria-label="Full Name Input" required>
-                </div>
-
-                <div class="input-group mb-3">
-                    <span class = "input-group-text">Contact Number</span>
-                    <input id = "contactNumber" name = "contactNumber" type="tel" class="form-control"
-                           aria-describedby="Contact Number" aria-label="Contact Number Input" required>
-                </div>
-
-                <div class="input-group mb-3">
-                    <span class = "input-group-text">Email Address</span>
-                    <input id = "emailAddress" name = "emailAddress" type="email" class="form-control"
-                           aria-describedby="Email Address" aria-label="Email Address Input" required>
-                </div>
-
-                <div class="input-group mb-3">
-                    <span class = "input-group-text">Your Message</span>
-                    <input id = "message" name = "message" class= "form-control"
-                           aria-describedby="Message Area" aria-label="Message Area Input">
-                </div>
-
-
-                <div class="input-group mb-3">
-                    <input id = "subscribeCheckbox" type="checkbox" class="form-check-input" >
-                    <label class="form-check-label" for="subscribeCheckbox">Subscribe to our contact list.</label>
-                </div>
-
-                <button id = "sendButton" type="submit" class="btn btn-primary toggle-btn-valid"><i class="fa-solid fa-envelope"></i> Submit</button>
-                <button id = "cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i> Cancel</button>
-
-            </form>
-
-            <div class = "col-lg-4 col-md-4">
-                <a href = "contact-list.html" class ="btn btn-primary"><i class="fa-solid fa-users"></i> Show Contact List </a>
+                <h3 class="my-3">Contact us</h3>
+                Send us your queries or questions, and we will be in touch within 3-5 business day.
             </div>
+        </div>
+    </div>
+</div>
 
+<!-- Form and Contact Info Section -->
+<div class="container">
+
+    <div class="row">
+        <!-- Form Section -->
+        <div class="col-md-8">
+            <!-- form goes here -->
+            <form class="contact-info" id="contactForm" novalidate>
+                <!-- Name Field -->
+                <div class="mb-3">
+                    <label for="userName" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="userName" name="userName" placeholder="User name" required>
+                    <div class="invalid-feedback">Please enter a user name.</div>
+                </div>
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                    <div class="invalid-feedback">Please enter an email address.</div>
+                </div>
+                <!-- Subject Field -->
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Your Subject" required>
+                    <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+                <!-- Message Field -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="col-md-4 d-flex align-items-start">
+            <div class="contact-info">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-envelope"></i> Email: contactus@example.com</li>
+                    <li><i class="fa-solid fa-phone"></i> Phone: 123-456-7890</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Address: 120 Harmonious Road, Harmony</li>
+                    <li><i class="fa-brands fa-square-x-twitter"></i> X (Twitter)</li>
+                    <li><i class="fa-brands fa-square-instagram"></i> Instagram</li>
+                    <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+
+
+                </ul>
+                <div id="map" style="height: 235px;"></div>
+            </div>
 
         </div>
     </div>
+</div>
 
 
 
-    <!-- SCRIPTING SECTION -->
-    <script src = "./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src = "./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src = "./scripts/namespace.js"></script>
-    <script src = "./scripts/contact.js"></script>
-    <script src = "./scripts/app.js"></script>
+
+<!-- Modal -->
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Your Form</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body " id="modal-body">
+
+            </div>
+            <div class="modal-footer ">
+<!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary " ID="contactUsModalButton" >Look's good</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Thank You Modal -->
+<div class="modal fade " id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+                <p>Thank you for your submission. You will be redirected in <span id="countdown">5</span> seconds.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feedback Button -->
+<button id = "contact-feedback-button" type="button" class="btn btn-primary feedback-button"
+        data-bs-toggle="modal" data-bs-target="#feedbackModal">
+        <i class="fa-solid fa-list-check"></i> Feedback
+</button>
+
+<!-- Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+
+</div>
+
+
+
+<footer id="footer-nav"></footer>
+
+<!-- SCRIPTING SECTION -->
+<script src="./scripts/main.js"></script>
+<script src="./scripts/user.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src = "./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 
 </body>
-
-
 </html>
+
+
+
+
