@@ -1,0 +1,55 @@
+{
+  "content" :
+  [
+    {
+      "title" : "Home Page",
+      "url" : "./index.html",
+      "content" : "Description: Landing page for Harmony Hub. Harmony Hub Welcome to Harmony Hub Vibrant Energetic Community Experience"
+    },
+    {
+      "title" : "Portfolio",
+      "url" : "./portfolio.html",
+      "content" : "Description: Portfolio page for Harmony Hub. Portfolio Whatever you choose, you have an adventure waiting for you. Day Drop In General community drop-in, all ages. Kids Sports Day Youth drop in for all sports. Hiking Adventure Community hike of the trails. Community Social Social with music, drinks, and snacks. Tennis Club Bi-Weekly tennis club. Pilates in the Park Workout and push each other! Basketball Tournament Above 16 Basketball. Sunset Mediation Led by a talented practitioner. Yoga Led by a talented practitioner."
+    },
+    {
+      "title" : "Services",
+      "url" : "./services.html",
+      "content" : "Description: services page for Harmony Hub. Signature Services. Children's Play Area Our Children's Play Area is a vibrant and secure space designed to spark the imagination and encourage physical activity among children. This lively zone is equipped with safe, age-appropriate play equipment, including swings, slides, and a variety of interactive games. The area is brightly colored and stimulating, providing an ideal environment for children to socialize, play, and learn. Regularly supervised by experienced staff, we ensure a safe and nurturing space where parents can feel comfortable while their children engage in fun and educational activities. Senior Citizen Lounge The Senior Citizen Lounge is a warm and welcoming space tailored for the comfort and socialization of our senior community members. This lounge offers a tranquil setting with comfortable seating, where seniors can relax, read, or engage in quiet conversations. Equipped with facilities for leisure activities like board games, reading, and knitting, the lounge serves as a perfect spot for seniors to enjoy a cup of tea or coffee while socializing. Regular events such as book clubs, health workshops, and social gatherings are organized to encourage community interaction and well-being. Community Garden Our Community Garden is a green oasis that brings together people of all ages to learn, share, and cultivate. This garden is not just a place to grow fruits, vegetables, and flowers, but also a space for community members to engage with nature and each other. Participants can learn about sustainable gardening practices, participate in gardening workshops, and contribute to the beautification of the community. The garden fosters a sense of responsibility and ownership, as members nurture their plots and share the fruits of their labor. It's a place of tranquility, learning, and connection with nature."
+    },
+    {
+      "title" : "Team",
+      "url" : "./team.html",
+      "content" : "Description: Team page for Harmony Hub. Meet Our Team Brody Dentinger Developer Muhammad Yasir Patel Developer Brody Dentinger Name: Brody Dentinger ID: 100561604 LinkedIn: https://www.linkedin.com/in/brody-dentinger/ Description: I develop websites. Muhammad Yasir Patel Name: Muhammad Yasir Patel ID: 100854895 LinkedIn: www.linkedin.com/in/muhammad-yasir-patel Description: I develop websites and sometimes design them too."
+    },
+    {
+      "title" : "News",
+      "url" : "./news.html",
+      "content" : "Description: News page. The Harmony News Hub News and announcements for all things Harmony Hub, including new projects, events, news, blogs, and more."
+    },
+    {
+      "title" : "Contact",
+      "url" : "./contact.html",
+      "content" : "Description: Contact page. Contact us Send us your queries or questions and we will be in touch within 3-5 business day. User Name Email Subject Your Subject Message Contact Info Email: contactus@example.com Phone: 123-456-7890 Address: 120 Harmonious Road, Harmony X (Twitter) Instagram Linkedin"
+    },
+    {
+      "title" : "Register",
+      "url" : "./register.html",
+      "content" : "Description Register page for Harmony Hub. Register First Name Last Name Username Email Address Phone Number Password Register Have an account? Login"
+    },
+    {
+      "title" : "Login",
+      "url" : "./login.html",
+      "content" : "Description Login page for Harmony Hub. Login Username Password Login Register Don't have an account? Register"
+    },
+    {
+      "title" : "Events",
+      "url" : "./events.html",
+      "content" : "Events Description Events page for Harmony Hub. Events Check out what we have coming up below! Or click the gallery link below to look at moments from past events"
+    },
+    {
+      "title" : "Gallery",
+      "url" : "./gallery.html",
+      "content" : "Gallery events.html Gallery page for Harmony Hub. Gallery Here are some photos from past events!"
+    }
+  ]
+}
